@@ -9,7 +9,7 @@ int32_t main(){
         cin>>s;
         int x=0;
         if(n==2||n==1||n==3){cout<<"NO"<<endl;continue;}
-        for(int i=3;i<n-1;i++){ 
+        for(int i=2;i<n-1;i++){ 
             string a=s.substr(0,i);
             string b=s.substr(i,2);
             x=a.find(b);

@@ -2,8 +2,9 @@
 using namespace std;
 #define int long long
 int32_t main(){
-    string s="Hello world";
-    string t="wr";
+    string s="world";
+    string t=s.substr(4,2);
+    cout<<t;
     int l=s.find(t);
-    cout<<l;  
+    cout<<l;
 }
