@@ -1,17 +1,40 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
-#define int long long
-int recursive(int x,int y){
-    if(y==1)return x;
-    if(y%2==0){
-        x=power(x*x,y/2);
-    }else{
-        x=x*power(x*x,y/2);
+int main(){
+    int i, j, N;
+    cin>>N;
+    for(i=1; i<=N; i++)
+    {
+        for(j=1; j<i; j++)
+        {
+            cout<<" ";
+        }
+
+        cout<<i;
+        for(j=1; j<=((N - i) * 2 - 1); j++)
+        {
+            cout<<" ";
+        }
+        if(i != N)
+            cout<<i;
+        cout<<endl;
     }
-    return x;
-}
-int32_t main(){
-    int l;cin>>l;
-    int x;cin>>x;
-    cout<<recursive(l,x);
+    for(i=N-1; i>=1; i--)
+    {
+        for(j=1; j<i; j++)
+        {
+            cout<<" ";
+        }
+
+        cout<<i;
+        for(j=1; j<=((N - i ) * 2 - 1); j++)
+        {
+            cout<<" ";
+        }
+
+        cout<<i;
+        cout<<endl;
+    }
+
+
 }
