@@ -1,40 +1,31 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
-int main(){
-    int i, j, N;
-    cin>>N;
-    for(i=1; i<=N; i++)
-    {
-        for(j=1; j<i; j++)
-        {
-            cout<<" ";
+#define int long long
+vector<int> solve(string A, vector<int> &B) {
+    for(int i=0;i<B.size();i++){
+        int x=B[i]-1;
+        int y=0;
+        for(int i=1;i<(A.size()+1)/2;i++){
+            int a=x+i,b=x-i;
+            if(b<0)break;
+            if(a>=A.size())break;
+            if(A[a]==A[b])y++;
         }
-
-        cout<<i;
-        for(j=1; j<=((N - i) * 2 - 1); j++)
-        {
-            cout<<" ";
-        }
-        if(i != N)
-            cout<<i;
-        cout<<endl;
+        if(y==0)B[i]=0;
+        else B[i]=y*2+1;
     }
-    for(i=N-1; i>=1; i--)
-    {
-        for(j=1; j<i; j++)
-        {
-            cout<<" ";
-        }
+    return B;
+}
 
-        cout<<i;
-        for(j=1; j<=((N - i ) * 2 - 1); j++)
-        {
-            cout<<" ";
-        }
-
-        cout<<i;
-        cout<<endl;
+int32_t main(){
+    string s;cin>>s;
+    vector<int> v;
+    int n;cin>>n;
+    while(n--){
+        int x;cin>>x;
+        v.push_back(x);
     }
-
+    v=solve(s,v);
+    for(int i=0;i<v.size();i++)cout<<v[i]<<' ';
 
 }
