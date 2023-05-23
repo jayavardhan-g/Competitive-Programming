@@ -2,35 +2,19 @@
 using namespace std;
 #define int long long
 
-int mod(int  x){
-    if(x>0)return x;
-    return -x;
+bool compare( pair<int,int> a, pair<int,int> b){
+    if(a.second>b.second)return false;
+    return true;
 }
 
 int32_t main(){
+    vector<pair<int,int>> v;
     int n;cin>>n;
-    vector<int> v(n);
-    for(int i=0;i<n;i++)cin>>v[i];
-    
-    sort(v.begin(),v.end());
-    int y=0;
-    int x=v[n-1];
-    int i=n-2;
-    while(i>=0){
-        while(x>y&&i>=0){
-            y+=v[i];
-            i--;
-        }
-        
-        while(y>x&&i>=0){
-            x+=v[i];
-            i--;
-        }
-        
+    for(int i=0;i<n;i++){
+        int x,y;
+        cin>>x>>y;
+        v.push_back(make_pair(x,y));
     }
-
-    
-
-    cout<<mod(x-y);
-
+    sort(v.begin(),v.end(),compare);
+    for(int i=0;i<n;i++)cout<<v[i].first<<' ';
 }
