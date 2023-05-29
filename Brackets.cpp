@@ -48,7 +48,7 @@ int32_t main(){
             }
             
         }
-        if(ans)cout<<"YES"<<endl;
+        if(ans && v.size()==0)cout<<"YES"<<endl;
         else cout<<"NO"<<endl;
     }
 }
