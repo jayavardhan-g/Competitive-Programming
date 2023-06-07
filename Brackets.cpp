@@ -1,3 +1,4 @@
+//https://www.hackerrank.com/challenges/balanced-brackets/problem
 #include<bits/stdc++.h>
 using namespace std;
 #define int long long
@@ -12,36 +13,30 @@ int32_t main(){
             if(s[i]=='(')v.push_back(1);
             else if(s[i]=='[')v.push_back(2);
             else if(s[i]=='{')v.push_back(3);
-            
             else if(s[i]==')'){
                 if(v.size()==0){
                     ans=0;
                     break;
                 }
-                if(v[v.size()-1]==1)v.pop_back();
-                else {
+                if(v[v.size()-1]==1)v.pop_back();else {
                     ans=0;
                     break;
                 }
-            }
-            else if(s[i]==']'){
+            }else if(s[i]==']'){
                 if(v.size()==0){
                     ans=0;
                     break;
                 }
-                if(v[v.size()-1]==2)v.pop_back();
-                else {
+                if(v[v.size()-1]==2)v.pop_back();else{
                     ans=0;
                     break;
                 }
-            }
-            else{
+            }else{
                 if(v.size()==0){
                     ans=0;
                     break;
                 }
-                if(v[v.size()-1]==3)v.pop_back();
-                else {
+                if(v[v.size()-1]==3)v.pop_back();else{
                     ans=0;
                     break;
                 }
