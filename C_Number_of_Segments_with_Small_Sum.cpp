@@ -10,21 +10,18 @@ int seg(int n){
 int32_t main(){
     int n;cin>>n;
     int k;cin>>k;
-    vector<int> v(n+1,0);for(int i=1;i<n+1;i++)cin>>v[i];
-    for(int i=1;i<n;i++){
-        v[i]=v[i-1]+v[i];
-    }
+    vector<int> v(n);for(int i=0;i<n;i++)cin>>v[i];
     int ans=0;
-    int l=0,r=1;
-    while(l<=r && l<=n && r<=n){
-        if(r<n && v[r]-v[l]<=k){
-            ans++;
-            r++;
+    int sum=0;
+    int j=0;
+    for(int i=0;i<n;i++){
+        sum+=v[i];
+
+        while(sum>k){
+            sum-=v[j];
+            j++;
         }
-        else {
-            l++;
-            if(v[])
-        }
+        if(sum<=k)ans+=i-j+1;
     }
     cout<<ans;
 }
