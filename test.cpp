@@ -9,7 +9,7 @@ int main()
        cin>>n >>m >>h;
 
         long long int p=min(n,m);
-       vector<int>a(n),b(m);
+       vector<long long int>a(n),b(m);
        for(i=0;i<n;i++){
        cin>>a[i] ;
        }
