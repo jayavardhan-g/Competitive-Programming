@@ -1,16 +1,27 @@
 #include<bits/stdc++.h>
 using namespace std;
-#define endl cout<<"\n";
-string removeDuplicates(string str) {
-	    string ans=str;
-	    map<char,int> m;
-	    for(int i=0;i<ans.size();i++){
-	        if(m[ans[i]]==0)m[ans[i]]++;
-            else{ ans.erase(i,1);i--;}
-	    }
-	    return ans;
+#define endl "\n"
+#define int long long
+
+vector<int> sol(vector<int> &v,vector<vector<int>> &q){
+	string o[5];
+	string t[5];
+	string f[5];
+	string e[5];
+	string s[5];
+	for(int i=0<v.size();i++){
+		if(v[i])
+	}
 }
+
 int32_t main(){
-    string s;cin>>s;
-    cout<<removeDuplicates(s);   
+	int n;cin>>n;   
+	vector<int> v(n);
+	for(int i=0;i<n;i++)cin>>v[i];
+	int q;cin>>q;
+	vector<vector<int>> Q(q,vector<int>(4));
+	for(int i=0;i<q;i++)for(int j=0;j<4;j++)cin>>Q[i][j];
+
+
+
 }

@@ -3,9 +3,14 @@ using namespace std;
 #define endl "\n"
 #define int long long
 
+void solve(){
+    string s;cin>>s;
+    
+}
+
 int32_t main(){
-int n;cin>>n;   
-vector<int> v(n);
-for(int i=0;i<n;i++)cin>>v[i]
-        
+    int t;cin>>t;
+    while(t--){
+        solve();
+    }
 }
