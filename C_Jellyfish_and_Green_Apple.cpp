@@ -4,14 +4,10 @@ using namespace std;
 #define int long long
 
 void solve(){
-    int m,k,a,ak;
-    cin>>m>>k>>a>>ak;
-
-    if(m-(ak*k + a) <= 0){cout<<0<<endl; return;}
-    
+    double n,m;cin>>n>>m;
+    cin>>n>>m;
     
 }
-
 int32_t main(){
     int t;cin>>t;
     while(t--){
