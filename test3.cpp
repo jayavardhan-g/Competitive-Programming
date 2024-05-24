@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+#define int long long
 int ans= 0;
 void foo(string s){
     if(s.length()<1){
@@ -23,7 +24,7 @@ void foo(string s){
 }
 
 int32_t main(){
-    string s= "MAXWELL";
-    foo(s);
-    cout<<ans<<endl;
+    int n=3037001881;
+    int z= n*n;
+    cout<<z;
 }

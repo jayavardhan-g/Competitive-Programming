@@ -32,22 +32,23 @@ int32_t main(){
 	// 	cin>>a[i];
 	// }
 	// for(int i=1;i<n;i++)a[i]=a[i]+a[i-1];
-	int n,q;
-	cin>>n;
-	int a[n+1];
-	a[0]=0;
-	for(int i=1;i<n;i++){
-		cin>>a[i];
-		a[i]=a[i]+a[i-1];
-	}
-	// for(int i=1;i<n;i++)a[i]=a[i]+a[i-1];
-	// for(int i=0;i<n+1;i++)cout<<a[i]<<' ';
-	// cout<<endl;
-	cin>>q;
-	cin>>q;
-	while(q--){
-		int x,m;
-		cin>>x>>m;
-		cout<<bs(m,x,n,a)<<endl;
-	}
+	// int n,q;
+	// cin>>n;
+	// int a[n+1];
+	// a[0]=0;
+	// for(int i=1;i<n;i++){
+	// 	cin>>a[i];
+	// 	a[i]=a[i]+a[i-1];
+	// }
+	// // for(int i=1;i<n;i++)a[i]=a[i]+a[i-1];
+	// // for(int i=0;i<n+1;i++)cout<<a[i]<<' ';
+	// // cout<<endl;
+	// cin>>q;
+	// cin>>q;
+	// while(q--){
+	// 	int x,m;
+	// 	cin>>x>>m;
+	// 	cout<<bs(m,x,n,a)<<endl;
+	// }
+	cout<< sqrt(1e6+1);
 }
